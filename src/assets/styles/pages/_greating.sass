@@ -1,0 +1,64 @@
+.greating-wrap
+  height: calc(100vh - 50px)
+  position: relative
+
+.greating
+  color: #fff
+  overflow: hidden
+  position: absolute
+  width: 100%
+  top: 0
+  bottom: 0
+  margin: auto
+  height: 500px
+  @include mobile
+    height: 100vh
+  &-left
+    width: 50%
+    @include mobile
+      width: 100%
+      margin-bottom: 50px
+    &-title
+      font-family: Branded
+      font-size: 83px
+      text-transform: uppercase
+      color: $c-sec
+      @include mobile
+        font-size: 60px
+    &-text
+      font-family: Branded
+      font-size: 17px
+  &-right
+    float: right
+    width: 50%
+    padding: 28px
+    background-color: rgba(0,0,0, 0.3)
+    font-family: Branded
+    @include mobile
+      width: 100%
+      float: none
+      text-align: right
+    &-title
+      font-size: 28px
+      @include mobile
+        font-size: 24px
+    &-link
+      font-size: 13px
+      font-style: italic
+      cursor: pointer
+      a
+        color: white
+      @include tablet
+        font-size: 18px
+      &:hover
+        a
+          color: $c-sec
+          &:after
+            background-color: $c-sec
+    &-hr
+      width: 37px
+      margin: 20px 0 25px
+      height: 1px
+      border-bottom: 1px solid $c-sec
+      @include mobile
+        display: inline-block

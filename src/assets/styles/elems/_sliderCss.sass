@@ -1,0 +1,42 @@
+.slider
+	position: relative
+	margin: 0px auto
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75)
+.slider>img
+	position: absolute
+	width: 100%
+	height: 100%
+	left: 0
+	top: 0
+	transition: all 0.5s
+	z-index: -1
+.slider input
+	display: none
+.slider label
+	margin: 340px 0 0 22px
+	border: 2px solid #44931d
+	float: left
+	cursor: pointer
+	transition: all 0.5s
+	opacity: 0.8
+	position: relative
+	left: 15%
+	@include desktop
+		margin-top: 250px
+		left: 10%
+	@include laptop
+		margin-top: 180px
+		left: 0
+.slider label img
+	display: block
+	@include laptop
+		width: 85px
+.slider input:checked+label
+	border-color: #fff
+	opacity: 1
+.slider input ~ img
+	opacity: 0
+	transform: scale(1.05)
+.slider input:checked+label+img
+	opacity: 1
+	transform: scale(1)

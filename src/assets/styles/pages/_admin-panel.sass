@@ -1,0 +1,179 @@
+.admin
+  height: calc(100vh - 100px)
+  margin-top: -$header-height
+  .admin-logo-wrap
+    text-align: center
+  *
+    font-family: sans-serif
+  .right
+    text-align: right
+  .admin-post-title
+    font-size: 24px
+    margin-left: 30px
+    font-family: 'branded'
+    color: white
+    &-edit
+      position: absolute
+      top: 15px
+      font-family: branded
+      color: white
+      font-size: 24px
+  .admin-list-content
+    display: flex
+    flex-direction: row-reverse
+  .admin-edit-window
+    position: relative
+    transition: .4s
+    visibility: hidden
+    padding: 0
+    width: 0
+    background: white
+    padding-top: 20px
+    &.active
+      visibility: visible
+      width: 50%
+      padding: 15px 40px
+    .ant-form-item
+      margin-bottom: 14px
+    .ant-row
+      display: flex !important
+    .ant-form-item-label
+      text-align: left
+      width: 200px
+    .ant-form-item-control-wrapper
+      width: 100%
+  .admin-content-window
+    transition: .4s
+    width: 100%
+    padding: 15px 15px
+    &.active
+      width: 50%
+      padding: 15px 30px
+      .ant-list-item-extra
+        display: none
+  .handle-toggler
+    z-index: 1
+    margin-right: 30px
+    i
+      background: $c-admin-dark
+      border: 2px solid #f0f2f5
+      border-radius: 20px
+      padding: 7px
+  &-header
+    background: $c-admin-dark
+    display: flex
+    padding: 0
+    color: #fff
+    font-size: 24px
+  .ant-layout
+    height: 100vh
+    .logo
+      font-size: 24px
+      color: #fff
+      margin: 15px auto 20px
+      height: 50px
+      width: 50px
+      text-align: center
+      border-radius: 100%
+      img
+        height: 100%
+    .calendar-list-img-wrap img
+      max-width: 100%
+    .ant-layout-sider
+      background-color: $c-admin-dark
+    .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected
+      background-color: $c-admin-light
+      color: $c-admin-dark
+      a
+        background-color: $c-admin-light
+        color: $c-admin-dark
+    .ant-layout-content
+      margin: unset
+  .header-admin-nav
+    display: flex
+    align-items: center
+    font-size: 30px
+    top: 7px
+    z-index: 10
+    .styled-btn
+      display: inline-block
+      vertical-align: middle
+    i
+      background: $c-admin-dark
+      color: white
+      border-radius: 40px
+      padding: 7px
+.calendar-list-dates-created
+  font-size: 15px
+  font-weight: bold
+.calendar-list-img-wrap
+  height: 100%
+  img
+    height: 90%
+.calendar-list-controls
+  display: flex
+  margin-top: 25px
+  &-btn
+    margin-right: 10px
+    border: 1px solid $c-admin-dark
+    border-radius: 5px
+    padding: 5px 15px
+    cursor: pointer
+    color: gray
+    a
+      color: gray
+
+.calendar-list-info
+  &.feedback
+    align-items: baseline
+    &>div:first-child
+      width: 40%
+    &>div:last-child
+      width: 60%
+  display: flex
+  justify-content: space-between
+  &>div:first-child
+    width: 60%
+  &>div:last-child
+    width: 40%
+.ant-list-item
+  padding: 10px 20px
+  .ant-list-item-main
+    width: 70%
+    margin: 0
+  .ant-list-item-extra
+    width: 30%
+    max-height: 130px
+
+// context buttons
+.admin-header-context-btns
+
+// login
+.login-form-wrapper
+  height: calc(100vh - 200px)
+  vertical-align: middle
+  display: flex
+  align-items: center
+.login-form
+  background-color: #fff
+  padding: 20px 30px
+  border-radius: 5px
+  margin: 30px auto 20px
+  max-width: 300px
+  .ant-form-item
+    margin-bottom: 10px
+.login-form-forgot
+  float: right
+.login-form-button
+  width: 100%
+.feedback-admin-display-event
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 20px
+  .info
+  .info-title
+  .img
+    width: 100px
+    img
+      width: 100%

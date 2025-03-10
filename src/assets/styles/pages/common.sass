@@ -1,0 +1,94 @@
+.content
+  min-height: 100vh
+  padding-top: $header-height
+  position: relative
+  overflow: hidden
+  padding-bottom: 50px
+  @include mobile
+    padding-bottom: 50px
+  .content-bcg
+    display: block
+    position: absolute
+    width: 100%
+    min-height: 100%
+    background-image: url('../img/delab.png')
+    background-size: cover
+    background-color: #000
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-position: top 150px right 100px
+    transform: translateZ(-1px) scale(1.1)
+    z-index: -1
+    @include mobile
+      background-position: top 50px right 50px
+      background-size: 250%
+      background-attachment: fixed
+.footer
+  line-height: 70px
+  margin-top: -70px
+  color: white
+  text-align: center
+  font-size: 14px
+  background-color: #000
+
+.contacts-card
+  height: 440px
+  @include laptop
+    height: unset
+
+.contacts-img
+  background-position: top !important
+
+.triangle-wrap
+  @include mobile
+    display: none
+
+.main,
+.fitokafe,
+.health,
+.beauty,
+.calendar_events,
+.about,
+.success
+  margin-top: 70px
+  @include laptop
+    margin-top: 90px
+  @include tablet
+    margin-top: 30px
+  @include mobile
+    margin-top: 60px
+.main
+  @include mobile
+    margin-top: 100px
+.calendar_events
+  // margin-top: 158px
+  @include laptop
+    margin-top: 100px
+  @include tablet
+    margin-top: 0
+
+.about
+  padding-top: 0
+  @include laptop
+    margin-top: 90px
+  @include tablet
+    margin-top: 90px
+
+.about.contacts
+  margin-top: 90px
+  padding-top: 0
+  padding-bottom: 0
+  @include laptop
+    margin-top: 120px
+  @include laptop
+    margin-top: 0px
+
+.animation-for-routes
+  animation-name: routes-animation
+  animation-duration: .4s
+
+@keyframes routes-animation
+  from
+    transform: translate3d(-100px, -50px, -50px)
+  to
+    transform: translate3d(0px, 0px, 0px)

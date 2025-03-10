@@ -1,0 +1,86 @@
+.form
+  &>*
+    width: 95%
+  input, textarea
+    width: 100% !important
+    &::placeholder
+      color: lightgray !important
+      font-family: sans-serif
+      font-weight: 100
+  padding: 10px
+  .ant-input-prefix
+    line-height: 1
+  .ant-input
+    padding-right: 40px !important
+    padding-left: 33px !important
+  .form-item-textarea
+    padding-bottom: 40px
+    textarea
+      margin-right: 0 !important
+  .form-item
+    display: block
+    font-size: 16px
+    margin-bottom: 15px
+    color: $c-text
+    font-weight: 300
+    margin: 3px auto 4px
+    @include tablet
+      margin-right: 0
+    &::placeholder
+      color: lightgray
+      font-family: sans-serif
+      font-weight: 100
+  .ant-input
+    margin: 0 !important
+  textarea
+    height: 120px
+    border-color: lightgray
+    &::placeholder
+      color: lightgray
+      font-family: sans-serif
+  .form-submit
+    margin: auto
+    transform: translateY(-50%)
+    font-size: 16px
+    font-family: aria
+    color: white
+    background: black
+    width: 150px
+    padding: 10px 20px
+    font-style: italic
+
+.ant-form-item-control-wrapper
+  .ant-form-item-children
+    display: block
+.content-in-select
+  display: flex
+.wrap-img-in-select
+  height: 30px
+  width: 30px
+  border-radius: 30px
+  position: relative
+  margin-right: 30px
+  img
+    height: 100%
+.wrap-title-in-select
+  font-family: header
+  font-size: 15px
+  .title-in-select
+    display: block
+
+.ant-form
+  .ant-form-item
+    &:last-child
+      margin-bottom: 5px
+.form-wrap
+  width: 100%
+  &>span
+  .form-item-email
+    input
+      background: upset
+      outline: none
+      box-shadow: none
+
+.btn-submit-item
+  margin-top: -50px
+  text-align: center

@@ -1,0 +1,85 @@
+.about-info-block-call
+  a
+    color: $c-sec
+  &:hover
+    a
+      color: rgba($c-sec, .6)
+.contacts
+  background-color: $c-rgba-white
+  padding-top: 50px
+  padding-bottom: 50px
+  .smart-phone
+    font-size: 20px
+    line-height: 1.8
+    a
+      vertical-align: middle
+      display: inline-block
+      color: $c-sec
+  &-title
+    font-family: Branded
+    color: black
+    font-size: 55px
+    margin-bottom: 50px
+    text-align: center
+  &-address, &-tel
+    font-size: 18px
+    text-align: center
+    line-height: 1.1
+    font-family: sans-serif
+  .contact_icons-email
+    .label
+      color: $c-sec
+      font-size: 20px
+  &-tel
+  &-container
+    // max-width: 500px
+    margin: auto
+    .contacts
+      padding-top: 30px !important
+      padding-bottom: 30px !important
+  input, textarea
+    display: block
+    width: 100%
+    padding: 5px 0 5px 10px
+    font-size: 16px
+    margin-bottom: 15px
+    color: $c-text
+    font-weight: 300
+    margin: 3px auto 4px
+    @include tablet
+      width: 95%
+    &::placeholder
+      color: black
+      font-family: sans-serif
+      font-weight: 100
+  textarea
+    height: 120px
+    border-color: lightgray
+    &::placeholder
+      color: black
+      font-family: sans-serif
+  .form-submit
+    font-family: aria
+    color: white
+    background: black
+    width: 150px
+    font-size: 16px
+    padding: 7px 20px
+    font-style: italic
+    margin: auto
+    transform: translateY(-75%)
+  .soc-icons
+    display: flex
+    margin: auto
+    align-items: center
+    height: 50px
+    width: 100px
+    margin-bottom: 25px
+    .icon
+      height: 16px
+      width: 16px
+      margin-right: 15px
+      svg
+        fill: black
+        &:hover
+          fill: #999999

@@ -1,0 +1,375 @@
+*** React-Native/React/Redux snippets for es6/es7 ***
+
+<< //** MAIN **>>
+
+** import
+imr       -	Import React
+imrc      -	Import React Component
+
+** func
+ccs       -	Component Class
+sl        -	Stateless Component
+slr       -	Stateless Component Return
+cdm       -	ComponentDidMount
+tt        - test('$1', () => { $2 });
+** redux
+crr       -	Connect Redux
+rct       -	Redux constant
+ccsr      -	Component Class With Redux
+rrd       -	Redux Reducer
+
+** styled
+ims       -	Import Styled-Components
+styc      -	Styled Component
+estyc     -	Export Styled Component
+
+<< ** MAIN  **// >>
+
+imro      -	Import React as Object
+imrpc     -	Import React PureComponent
+imrn      -	Import React-Native Element
+imsn      -	Import Styled-Components Native
+impt      -	Import PropTypes
+cccs      -	Component Class With Constructor
+ccsf      -	Component Class FlowType
+pcs       -	PureComponent Class
+pccs      -	PureComponent Class With Constructor
+pcsf      -	PureComponent FlowType
+edccs     -	Export default Component Class
+rpf       -	Redux Pure Function
+rpc       -	Redux Pure Function Const
+cwm       -	ComponentWillMount
+cdu       -	ComponentDidUpdate
+scu       -	ShouldComponentUpdate
+cwu       -	ComponentWillUpdate
+cwum      -	ComponentWillUnmount
+cwrp      -	ComponentWillReceiveProps
+cdc       -	ComponentDidCatch
+cct       -	Create Context
+gds       -	getDerivedStateFromProps
+rnss      -	StyleSheet Style
+ess       -	EStyleSheet Style
+ed        -	Export default
+edl       -	EslintDisableLine
+ednl      -	EslintDisableNextLine
+edstyc    -	Export default Styled Component
+cmmb      -	Comment Big Block
+log       -	Console Log
+cl        -	Standard console.log              !
+tt        -	Test
+tdesc     -	Test Describe
+tit       -	Test It
+ffm       -	FlowFixMe
+rnstory   -	React-Native Story
+rstory    -	React Story
+
+>>>>>>
+
+sl [Stateless Component]
+const $1 = () => (
+  $2
+);
+
+export default $1;
+slr [Stateless Component Return]
+const $1 = () => {
+  return (
+    $2
+  );
+}
+
+export default $1;
+slc [Stateless Component Function]
+function $1($2) {
+  $3
+}
+
+export default $1;
+ccs [Component Class]
+class $1 extends Component {
+  state = { $2 }
+  render() {
+    return (
+      $3
+    );
+  }
+}
+
+export default $1;
+cccs [Component Class With Constructor]
+class $1 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { $2 };
+  }
+  render() {
+    return (
+      $3
+    );
+  }
+}
+
+export default $1;
+ccsf [Component Class FlowType]
+type P = {
+  $1
+};
+
+type S = {
+  $2
+};
+
+class $3 extends Component<P, S> {
+  constructor(props) {
+    super(props);
+    this.state = { $4 };
+  }
+  render() {
+    return (
+      $5
+    );
+  }
+}
+
+export default $3;
+pcs [PureComponent Class]
+class $1 extends PureComponent {
+  state = { $2 }
+  render() {
+    return (
+      $3
+    );
+  }
+}
+
+export default $1;
+pccs [PureComponent Class With Constructor]
+class $1 extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = { $2 };
+  }
+  render() {
+    return (
+      $3
+    );
+  }
+}
+
+export default $1;
+pcsf [PureComponent Class FlowType]
+type P = {
+  $1
+};
+
+type S = {
+  $2
+};
+
+class $3 extends PureComponent<P, S> {
+  constructor(props) {
+    super(props);
+    this.state = { $4 };
+  }
+  render() {
+    return (
+      $5
+    );
+  }
+}
+
+export default $3;
+ccsr [Component Class With Redux]
+class $1 extends Component {
+  state = { $2 }
+  render() {
+    return (
+      $3
+    );
+  }
+}
+
+export default connect($4, $5)($1);
+edccs [Export default Component Class]
+export default class $1 extends Component {
+  state = { $2 }
+  render() {
+    return (
+      $3
+    );
+  }
+}
+rrd [Redux Reducer]
+export default (state = $1, action) => {
+  switch (action.type) {
+    case $2:
+      $3
+    default:
+      return state;
+  }
+};
+rpf [Redux pure function]
+export const $1 = '$1';
+
+export function $2($3) {
+  return {
+    type: $1,
+    $3
+  }
+}
+rpc [Redux pure function const]
+export const $1 = '$1';
+
+export const $2 = $3 => ({
+  type: $1,
+  $3
+});
+cwm [ComponentWillMount]
+componentWillMount() {
+  $1
+}
+cwu [ComponentWillUpdate]
+componentWillUpdate() {
+  $1
+}
+cdu [ComponentDidUpdate]
+componentDidUpdate(prevProps, prevState) {
+  $1
+}
+scu [ShouldComponentUpdate]
+shouldComponentUpdate(nextProps, nextState, nextContext) {
+  $1
+}
+cdm [ComponentDidMount]
+componentDidMount() {
+  $1
+}
+cwum [ComponentWillUnmount]
+componentWillUnmount() {
+  $1
+}
+cwrp [ComponentWillReceiveProps]
+componentWillReceiveProps(nextProps) {
+  $1
+}
+cdc [ComponentDidCatch]
+componentDidCatch(error, info) {
+  $1
+}
+cct [Create Context]
+
+const $1Context = createContext($2);
+
+class $1Provider extends Component {
+  state = {
+    $3
+  }
+
+  render() {
+    return (
+      <$1Context.Provider value={{ state: { $3 }, actions: {} }}>
+        {this.props.children}
+      </$1Context.Provider>
+    );
+  }
+}
+
+export default $1Provider;
+gds [getDerivedStateFromProps]
+static getDerivedStateFromProps(nextProps, prevState) {
+  $1
+}
+rnss [StyleSheet Style]
+const styles = StyleSheet.create({
+  $1
+});
+ess [EStyleSheet]
+import EStyleSheet from 'react-native-extended-stylesheet';
+
+const styles = EStyleSheet.create({
+  $1
+});
+
+export default styles;
+ed [Export default]
+export default $1;
+edl [Eslint Disable Line]
+// eslint-disable-line
+ednl [Eslint Disable Next Line]
+// eslint-disable-next-line
+styc [Styled Component]
+const $1 = styled.$2`
+  $3
+`
+estyc [Export Styled Component]
+export const $1 = styled.$2`
+  $3
+`
+edstyc [Export default Styled Component]
+export default styled.$1`
+  $2
+`
+cmmb [Comment Big Block]
+/**
+|--------------------------------------------------
+| $1
+|--------------------------------------------------
+*/
+log [Console Log]
+console.log('====================================');
+console.log($1);
+console.log('====================================');
+cl [Standard console.log]
+console.log($1);
+tdesc [Test Describe]
+describe('$1', () => {
+  $2
+});
+tit [Test It]
+it('should $1', $2($3) => {
+  $4
+});
+ffm [FlowFixMe]
+// $FlowFixMe
+rnstory [React-Native Story]
+import React from 'react';
+import { storiesOf } from '@storybook/react-native';
+
+storiesOf('$1', module)
+  .add('default', () => $2);
+rstory [React Story]
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+
+storiesOf('$1', module)
+  .add('default', () => $2);
+Categories
+Snippets
+Tags
+es6es7javascriptreactreact-nativereduxsnippetsnippetsstorybookvscode
+Resources
+Repository
+Changelog
+Download Extension
+Project Details
+EQuimper/VSC-React-Native-React-Redux-Snippets
+4 Open Issues
+Last Commit: 3 months ago
+2 Pull Requests
+https://marketplace.visualstudio.com/items?itemName=EQuimper.react-native-react-redux/
+https://marketplace.visualstudio.com/items?itemName=EQuimper.react-native-react-redux/
+https://marketplace.visualstudio.com/items?itemName=EQuimper.react-native-react-redux/
+More Info
+Version
+2.0.3
+Released on
+23.02.2017, 16:51:30
+Last updated
+01.03.2019, 16:03:48
+Publisher
+EQuimper
+Unique Identifier
+EQuimper.react-native-react-redux
+Report
+Report Abuse
+

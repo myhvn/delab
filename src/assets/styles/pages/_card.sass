@@ -1,0 +1,57 @@
+.card
+  display: flex
+  // min-height: 400px
+  height: 350px
+  margin-bottom: 50px
+  overflow: hidden
+  @include tablet
+    height: unset
+    margin-bottom: 50px
+    flex-direction: column-reverse
+  &-price
+    margin-top: 20px
+    font-weight: 600
+    font-family: sans-serif
+  &.reverse
+    flex-direction: row-reverse
+    @include tablet
+      flex-direction: column-reverse
+  &-content
+    width: 60%
+    padding: 24px 45px 40px
+    text-align: center
+    background: $c-rgba-white
+    @include laptop
+      padding: 25px 20px
+    @include tablet
+      width: 100%
+      padding: 40px 20px
+  &-hr
+    margin-bottom: 25px
+    width: 45px
+    height: 2px
+    background-color: $c-sec
+  &-img
+    width: 40%
+    background-size: cover
+    background-position: bottom
+    @include tablet
+      width: 100%
+      height: 350px
+      background-position: center
+  &-title
+    font-family: Gothic
+    font-size: 28px
+    font-weight: 700
+    margin-bottom: 5px
+  &-subtitle
+    font-family: Gothic
+    font-size: 20px
+    // text-transform: uppercase
+    margin-bottom: 15px
+  &-text
+    font-size: 15px
+    font-family: Gothic
+    line-height: 1.5
+  &-hr
+  &-link

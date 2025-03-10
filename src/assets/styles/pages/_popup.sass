@@ -1,0 +1,39 @@
+.popup
+  width: 100vw
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed
+  z-index: 999
+
+.popup__wrapper
+  width: 100vw
+  height: 100vh
+  position: absolute
+  top: 0px
+  left: 0px
+  background: rgba(0, 0, 0, 0.8)
+  z-index: 0
+
+.popup__window
+  // width: calc(100vw - 250px)
+  // min-height: 500px
+  width: 500px
+  text-align: center
+  background: #fff
+  box-sizing: border-box
+  padding: 10px 20px
+  z-index: 1
+  @include mobile
+    width: 90%
+  img
+    width: 100%
+
+.slider-popup
+  padding: 20px 15px 25px
+  // background-color: #000
+  h1
+    margin-bottom: 30px
+    font-style: italic
+    font-weight: 300

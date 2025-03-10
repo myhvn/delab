@@ -1,0 +1,49 @@
+.custom-select *
+  user-select: none
+
+.custom-select
+  position: relative
+
+.custom-select select
+  display: none
+
+.select-selected:after
+  position: absolute
+  content: ""
+  top: 8px
+  bottom: 0
+  margin: auto
+  right: 8px
+  width: 0
+  height: 0
+  border: 5px solid transparent
+  border-top-color: #fff
+
+.select-selected.select-arrow-active:after
+  border-color: transparent transparent #fff transparent
+  top: -10px
+
+.select-items,.select-selected
+  color: #fff
+  border: 1px solid white
+  cursor: pointer
+  line-height: 27px
+  font-size: 13px
+  padding-left: 9px
+  width: 57px
+  transform: translateX(7px)
+  border-radius: 4px
+  background-color: transparent
+
+.select-items
+  position: absolute
+  top: 120%
+  left: 0
+  right: 0
+  z-index: 99
+
+.select-hide
+  display: none
+
+.select-items div:hover, .same-as-selected
+  background-color: rgba(0, 0, 0, 0.1)

@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Gothic';
+  src: url('../fonts/GothamPro.ttf');
+}
+
+@font-face {
+  font-family: 'Branded';
+  src: url('../fonts/DelabPro.ttf');
+}
+
+@font-face {
+  font-family: 'Italic';
+  src: url('../fonts/droidserifitalic.ttf');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Header';
+  src: url('../fonts/DINNextCYRLight.eot');
+  src: url('../fonts/DINNextCYRLight.otf'),
+        url('../fonts/DINNextCYRLight.woff') format('woff'),
+        url('../fonts/DINNextCYRLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Header';
+  src: url('../fonts/DINNextCYRRegular.otf');
+  font-style: normal;
+  font-weight: 400;
+}

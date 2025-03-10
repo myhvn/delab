@@ -1,0 +1,72 @@
+.slider {
+	position: relative;
+	overflow: hidden;
+	.xy-center {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.transition {
+		transition: all 350ms ease-in-out;
+	}
+	.r-3-2 {
+		width: 100%;
+		padding-bottom: 77%;
+		background-color: #ddd;
+	}
+	.image-holder {
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	/* Main Styles */
+	.gallery-wrapper {
+		position: relative;
+		overflow: hidden;
+	}
+	.gallery {
+		white-space: nowrap;
+		font-size: 0;
+		position: absolute;
+    bottom: 3%;
+		width: 100%;
+		text-align: center;
+	}
+	.item-wrapper {
+		cursor: pointer;
+		width: 12%;
+		display: inline-block;
+		background-color: white;
+		margin-right: 20px;
+    border: 1px solid green;
+    background-color: rgba(255,255,255,0.5);
+	}
+	.controls {
+    border-top: none;
+	}
+	.move-btn {
+		position: absolute;
+		top: 0;
+		width: 80px;
+		bottom: 0;
+		margin: auto;
+		display: inline-block;
+		border: none;
+		color: $c-dark-green;
+		background-color: transparent;
+		font-size: 64px;
+		&:hover {
+			color: $c-light-green;
+		}
+	}
+	.move-btn:first-child {
+		border-right: none;
+	}
+	.move-btn.left  {
+		left: 0;
+	}
+	.move-btn.right {
+		right: 0;
+	}
+}

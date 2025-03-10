@@ -1,0 +1,92 @@
+$border: 		 #c6c6c6;
+$border-focus: #9FB1C1;
+$brand-color:  #1b3d4d;
+$booking-green: #bdcc00;
+$asphalt: 		#506982;
+
+.form-group {
+  max-width: 400px;
+  margin: auto;
+  background-color: #fff;
+  border: 2px solid $c-light-green;
+  padding: 20px 30px;
+  &-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: left;
+    color: $asphalt;
+    border-bottom: 1px solid $asphalt;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+  }
+}
+.controls{
+	text-align: left;
+	position: relative;
+	margin-bottom: 12px;
+	input[type="text"],
+	input[type="email"],
+  input[type="number"],
+  input[type="date"],
+	input[type="tel"],
+	textarea,
+	button,
+	select{
+		padding: 12px;
+		font-size: 14px;
+		border: 1px solid $border;
+		width: 100%;
+		color: #888;
+		font-size: 16px;
+		font-weight: 300;
+		border-radius: 2px;
+		transition: all .3s;
+
+		&:focus, &:hover{
+			outline: none;
+			border-color: $border-focus;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.31);
+			+ label{
+				color: $booking-green;
+          cursor: text;
+			}
+		}
+	}
+	label{
+		position: absolute;
+		left: 8px;
+		top: 8px;
+    color: #999;
+		font-size: 16px;
+		display: inline-block;
+		padding: 4px 10px;
+		font-weight: 400;
+		background-color: rgba(255,255,255,0);
+		transition: color .3s, top .3s, background-color .8s;
+     background-color: rgba(255,255,255,1);
+
+    &.active{
+			top: -11px;
+			color: #555;
+      background-color: rgba(255,255,255,1);
+      width: auto;
+		}
+	}
+	textarea{
+		resize: none;
+		height: 140px;
+	}
+}
+.form-group button{
+  cursor: pointer;
+  // background-color: $brand-color;
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  margin: auto;
+  width: 100%;
+  // &:hover{
+  //   background-color: lighten($brand-color, 5%);
+  // }
+}

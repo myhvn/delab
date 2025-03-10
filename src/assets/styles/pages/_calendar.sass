@@ -1,0 +1,279 @@
+.calendar_events-handler
+  display: flex
+  background-color: $c-rgba
+  padding: 10px
+  @include tablet
+    flex-direction: column
+  .calendar_events-handler-wrap
+    @include mobile
+      display: none
+  &-wrap
+    display: inline-block
+    @include tablet
+      margin: auto
+  .description
+    width: calc(100% - 400px)
+    display: flex
+    flex-direction: column
+    padding: 0px 20px 0px 20px
+    font-family: Gothic
+    color: black
+    justify-content: space-around
+    @include laptop
+      padding: 0px 5px 0px 5px
+    @include tablet
+      margin: 20px auto 20px
+      width: 80%
+    @include mobile
+      margin: 20px auto 20px
+      width: 100%
+    h2
+      font-family: branded
+      font-size: 28px
+      margin-left: 20px
+      @include laptop
+        font-size: 24px
+      @include tablet
+        font-size: 28px
+      @include mobile
+        font-size: 22px
+    &-title
+      font-size: 28px
+      margin-bottom: 20px
+      font-family: 'branded'
+    &-text
+      font-size: 13px
+      font-style: italic
+      text-align: center
+      margin-bottom: 20px
+    &-link
+      font-style: italic
+      text-align: right
+      margin-bottom: 140px
+
+.calendar-client-events-title
+  margin: 50px auto
+  font-size: 30px
+  text-align: center
+  color: #fff
+  font-weight: 400
+  font-family: "Header"
+
+.calendar-client-events-item
+  height: 350px
+  display: flex
+  border: 1px solid $c-sec
+  margin-bottom: 30px
+  position: relative
+  @include tablet
+    flex-direction: column
+    min-height: 500px
+  &:nth-child(2n+1)
+    flex-direction: row-reverse
+    @include tablet
+      flex-direction: column
+    .calendar-client-events-item-info-description
+      .ant-collapse-content
+        right: 0
+        left: unset
+  &>div
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 50%
+    text-align: center
+    @include tablet
+      width: 100%
+      // height: 50%
+  &-img-wrap
+    position: relative
+    overflow: hidden
+
+    &:hover
+      img
+        transform: scale(1.1)
+    img
+      transition: .4s
+      height: 100%
+      object-fit: cover
+
+  &-info
+    align-items: center
+    background-color: #050505
+    color: white
+    font-weight: 300
+    font-family: "Header"
+    padding-left: 10px
+    padding-right: 10px
+    padding-top: 10px
+    &-where
+      font-size: 16px
+      display: flex
+      flex-direction: column
+      font-weight: 300
+      width: 100%
+    &-title
+      font-size: 22px
+      font-weight: 400
+      margin: 5px 0 0px
+      width: 100%
+      overflow-wrap: break-word
+    &-description
+      font-size: 16px
+      margin-bottom: 15px
+      height: 130px
+      overflow-Y: scroll
+      &::-webkit-scrollbar
+        display: none
+    &-date
+      font-size: 16px
+      span
+        margin: 0 5px
+    &-location
+      font-size: 16px
+      overflow-wrap: break-word
+    &-btn
+      background-color: $c-sec
+      color: black
+      padding: 10px 20px
+      font-size: 16px
+      font-weight: 300
+      transition: .3s
+      &:hover
+        background-color: rgba($c-sec, .7)
+        cursor: pointer
+.calendar-client-events-item-img-wrap
+  @include mobile
+    height: 250px
+.calendar-client-events-item-info
+  @include mobile
+    height: 100% !important
+.calendar-client-events-item-info-location
+  @include mobile
+    display: none
+.Cal__Day__month
+  top: -5px
+  font-size: 24px
+  z-index: 11
+.Cal__Day__root.Cal__Day__selected .Cal__Day__selection .Cal__Day__month
+  font-size: 12px
+
+.Cal__Today__root.Cal__Today__chevronDown .Cal__Today__chevron
+  margin-left: 30px
+
+.Cal__Header__root
+  min-height: 80px
+  padding: 3px 20px
+
+.Cal__Today__root .Cal__Today__chevron
+  margin-left: 30px
+
+.Cal__MonthList__root
+  overflow: hidden auto !important
+
+.Cal__Day__month
+
+.Cal__Day__root.Cal__Day__selected .Cal__Day__selection .Cal__Day__month
+  left: 0 !important
+
+.calendar_events-handler
+  padding-bottom: 0
+.calendar-client-events-item-info-price
+  margin-top: 5px
+  font-size: 18px
+  font-weight: 100
+.calendar-client-events-item-info-description
+  overflow: unset
+  height: auto
+  h2, h3, h4, h5, h6
+    color: white
+  .ant-collapse-borderless
+    background-color: transparent
+  .ant-collapse-item
+    border-bottom: none
+  .ant-collapse-header
+    color: $c-sec !important
+  .ant-collapse-content
+    width: 50%
+    height: 100%
+    position: absolute
+    color: white
+    top: 0
+    bottom: 0
+    left: 0
+    right: unset
+    @include tablet
+      top: 0
+      right: 0
+      left: 0
+      width: 100%
+      height: 50%
+    .ant-collapse-content-box
+      overflow-y: scroll
+      height: 100%
+      display: flex
+      &>div
+        display: inline
+        margin: auto
+    &.ant-collapse-content-active
+      border: 1px solid $c-sec
+      background-color: #000
+.calendar-client-events-item-info-description-content-wrapper
+  font-size: 18px
+  ul
+    li
+      list-style-type: disc
+  ol
+    li
+      list-style-type: decimal
+  *
+    color: white
+  pre
+    background: rgba(255,255,255,.1)
+    padding: 5px 21px
+    border-radius: 10px
+    margin: 5px 0
+  blockquote
+    border-left: 4px solid rgba(255,255,255,.2)
+    padding: 5px
+.calendar-client-events-item-info-btn
+  text-transform: uppercase
+
+.add-dynamic-calendar-data
+  width: 100%
+  height: 110px
+  padding: 5px 20px
+  justify-content: space-between
+  display: flex
+  position: relative
+  @include mobile
+    height: auto
+    flex-direction: column
+  &-info
+    width: 60%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    @include mobile
+      width: 100%
+      margin-bottom: 10px
+    .title
+      font-size: 21px
+      max-height: 62px
+      overflow: hidden
+      @include laptop
+        font-size: 18px
+        max-height: 58px
+  &-img
+    height: 100%
+    img
+      max-height: 100%
+      max-width: 100%
+
+.admin-alt-btn-close-editing
+  position: absolute
+  left: 0
+  top: 7px
+  transform: translate(-50%)
+  line-height: 1

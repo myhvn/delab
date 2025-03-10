@@ -1,0 +1,15 @@
+/** https://reactjsexample.com/a-rectangle-react-component-which-can-be-resized-and-rotated/ -- resizing block
+
+/** https://reactjsexample.com/simple-and-flexible-toast-notifications-for-react/ -- toasts
+
+/** https://www.npmjs.com/package/react-bootstrap-date-picker -- calendar
+
+/** https://reactjsexample.com/rate-something-with-material-ui-style/ -- rate stars
+
+/** https://reactjsexample.com/a-react-library-for-zooming-images-like-medium/ -- zooming images
+
+/** https://reactjsexample.com/a-circular-progressbar-component-built-with-svg/ -- circular progress bar
+
+/** http://react-redux-progress.surge.sh/ -- progressbar in top of block
+
+/** https://github.com/clauderic/react-infinite-calendar -- infinity calendar

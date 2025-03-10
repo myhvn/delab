@@ -1,0 +1,93 @@
+.header
+  width: 100%
+  height: auto
+  background-color: $c-dark
+  position: fixed
+  color: white
+  align-items: center
+  z-index: 99
+  .container
+    padding-top: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    @include laptop
+      flex-direction: column
+      width: auto
+    @include tablet
+      flex-direction: row
+  .soc-icons
+    display: flex
+    align-items: center
+    height: 50px
+    width: 100px
+    .icon
+      height: 16px
+      width: 16px
+      margin-right: 15px
+      svg
+        fill: #999999
+        &:hover
+          fill: white
+  &-humburger
+    display: none
+    @include tablet
+      display: block
+  .navigation
+    display: flex
+    width: calc(100% - 110px)
+    height: 50px
+    justify-content: space-between
+    align-items: center
+    animation-fill-mode: both
+    @include laptop
+      width: calc(100% - 50px)
+    @include tablet
+      visibility: hidden
+      width: 0
+    .nav-link
+      text-transform: uppercase
+      font-size: 15px
+      line-height: 1
+      font-weight: 300
+      font-family: Header
+      color: white
+      &.active, &:hover
+        color: $c-active-link
+  .navigation-mobile
+    display: flex
+    width: calc(100% - 150px)
+    height: 50px
+    justify-content: space-around
+    align-items: center
+    animation-fill-mode: both
+    z-index: 999
+    @include laptop
+      width: auto
+    @include tablet
+      visibility: hidden
+    &.rolledup
+      display: flex
+      visibility: visible
+      position: absolute
+      flex-direction: column
+      top: 50px
+      right: 0
+      height: calc(100vh - 50px)
+      width: 100vw
+      background: #050505
+      padding: 50px 0px
+      .nav-link
+        margin-bottom: 10px
+        font-size: 20px
+
+    .nav-link
+      text-transform: uppercase
+      font-size: 15px
+      line-height: 1
+      font-weight: 300
+      font-family: Header
+      color: white
+      &.active, &:hover
+        color: $c-active-link

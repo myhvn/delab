@@ -1,0 +1,127 @@
+$row-height: 336px;
+
+.triangles {
+  position: relative;
+  // height: -webkit-fill-available;
+  margin-bottom: -200px;
+  .row {
+    position: relative;
+    height: $row-height;
+    pointer-events: none;
+  }
+  .row2 {
+    transform: translateY(-45%);
+  }
+  .row3 {
+    transform: translateY(-90%);
+  }
+  .item {
+    width: 30%;
+    height: $row-height;
+    position: absolute;
+    overflow: hidden;
+    /* The points are: centered top, left bottom, right bottom */
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    background-size: cover;
+    // pointer events need set up
+    pointer-events: stroke;
+    cursor: pointer;
+    z-index: 2;
+    &:hover {
+      opacity: 0.5
+    }
+  }
+  .left {
+    clip-path: polygon(100% 0%, 0 50%, 100% 100%);
+  }
+  .right {
+    clip-path: polygon(0% 0, 0 100%, 100% 50%);
+  }
+  .el1 {
+    // background-image: url('./../img/triangles/smile.jpg');
+  }
+  .el2 {
+    // background-image: url('./../img/triangles/tower.jpg');
+    transform: translateX(105%);
+    background-position: center;
+  }
+  .el3 {
+    // background-image: url('./../img/triangles/work.jpg');
+    transform: translateX(210%);
+  }
+  .el4 {
+    // background-image: url('./../img/triangles/walk.jpg');
+  }
+  .el5 {
+    // background-image: url('./../img/triangles/amployers.jpg');
+    transform: translateX(105%);
+    background-position: center;
+  }
+  .el6 {
+    // background-image: url('./../img/triangles/room.jpg');
+    transform: translateX(210%);
+    background-position: right;
+  }
+  .el7 {
+    // background-image: url('./../img/triangles/fruits.jpg');
+    background-position: bottom;
+  }
+  .el8 {
+    // background-image: url('./../img/triangles/model.jpg');
+    transform: translateX(105%);
+    background-position: center;
+  }
+  .el9 {
+    // background-image: url('./../img/triangles/prost.jpg');
+    transform: translateX(210%);
+    background-position: bottom;
+  }
+}
+
+.wrapper{
+  background: #eee;
+  height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first{
+  width: 150px;
+  height: 150px;
+
+  // background: yellow;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.second{
+  width: 100px;
+  height: 200px;
+
+  // background: red;
+  transform: rotate(25deg);
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.third{
+    width: 100px;
+    height: 200px;
+
+    // background: blue;
+    transform: rotate(-25deg);
+    overflow: hidden;
+    position: absolute;
+
+    top: 0px;
+    right: 0px;
+    opacity: 0.5;
+}
+
+.third:hover{
+  opacity: 1;
+}

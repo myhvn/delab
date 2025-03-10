@@ -1,0 +1,63 @@
+// <a class="oldschool-tel" href="tel:"><span>☎️</span> Call us</a>
+// <a class="smart-phone" href="tel:"><span>📱</span>Call me</a>
+
+.contact_icons-smart-phone {
+  cursor: pointer;
+
+.smart-phone {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 45px;
+	color: #212121;
+	text-decoration: none;
+	// opacity: .6;
+  transition: .2s ease-in-out;
+  
+  span{
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: -20px;
+  }
+}
+
+i {
+  display: inline-block;
+  font-size: 18px;
+  margin-top: -9px;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+.smart-phone:hover{
+  opacity: 1;
+}
+
+.smart-phone:hover span{
+  -webkit-animation: vibrate 2s .6s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.smart-phone:hover span::before{
+  position: absolute;
+  margin-top: -45px;
+  margin-left: 4px;
+  content: "🎶";
+  font-size: 24px;
+  z-index: -1;
+  opacity: 0;
+  -webkit-animation: sound 2s .6s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@keyframes sound {
+	0% { margin-top: 0px; opacity: 1; }
+}
+
+@keyframes vibrate {
+	2% { transform: rotate(15deg); }
+	4% { transform: rotate(0deg); }
+	6% { transform: rotate(-15deg); }
+	8% { transform: rotate(0deg); }
+	92% { transform: rotate(0deg); }
+	94% { transform: rotate(15deg); }
+	96% { transform: rotate(0deg); }
+	98% { transform: rotate(-15deg); }
+}
+}

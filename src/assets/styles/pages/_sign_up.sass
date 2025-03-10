@@ -1,0 +1,193 @@
+.sign_up
+  background: white
+  overflow: hidden
+  padding: 20px 20px
+  height: 600px
+  position: relative
+  background-size: cover
+  background-position: top
+  background-image: url('./../img/form/office.png')
+  transition: .55s
+  &.active
+    background-image: url('./../img/form/woomen.png')
+    background-position: top right
+    .btn-cancel
+      position: absolute
+      font-family: sans-serif
+      background: #333333
+      color: white
+      height: 20px
+      width: 20px
+      border-radius: 20px
+      line-height: 1
+      border: 1px solid #333333
+      top: 0
+      left: 0
+      transform: translate(-50%, -50%)
+      transition: .3s ease
+      &:hover
+        color: #333333
+        background: white
+
+  &-title
+    font-family: Branded
+    font-size: 40px
+    line-height: 1.2
+    margin-bottom: 40px
+    text-align: center
+    @include laptop
+      font-size: 30px
+      margin-bottom: 5px
+    @include mobile
+      font-size: 25px
+  &-primary, &-active
+    max-width: 50%
+    background: white
+    padding: 30px 40px
+    float: right
+    height: 100%
+    @include laptop
+      padding: 50px 20px
+    @include tablet
+      min-width: 100%
+  &-primary
+    display: flex
+    flex-direction: column
+    // justify-content: space-between
+    background: rgba(255,255,255, .8)
+    &-text
+      // color: gray
+      font-family: Header
+      font-weight: 400
+      font-size: 20px
+    &-call
+      font-size: 20px
+      margin: 0 0 70px
+      text-align: center
+      &-link
+        font-family: Header
+        font-weight: 400
+        width: 130px
+        text-align: center
+        color: white
+        text-decoration: none
+        background-color: transparent
+        outline: none
+        background: #333
+        cursor: pointer
+        transition: 0.3s
+        padding: 5px 10px
+        margin-bottom: 10px
+        border: 1px solid #333
+        &:hover
+          border: 1px solid #333
+          background: white
+          color: #333
+  &-active
+    display: flex
+    flex-direction: column
+    input, textarea
+      display: block
+      width: 100%
+      padding: 5px 0 5px 10px
+      font-size: 16px
+      color: gray
+      &::placeholder
+        color: lightgray
+        font-family: aria
+    textarea
+      height: 100px
+      border-color: lightgray
+    .form-submit
+      color: white
+      background: black
+      font-family: aria
+      width: 100px
+      font-size: 16px
+      padding: 5px 20px
+      font-style: italic
+      margin: auto
+      transform: translateY(-75%)
+.ant-form, .form
+  @include mobile
+    padding: 0
+.prefix-input-phone
+  width: 115px !important
+  font-family: sans-serif
+  background: transparent
+  color: #333
+  input
+    background: upset
+    outline: none !important
+    box-shadow: none !important
+    border: none !important
+.sign_up-primary-link-wrap
+  display: flex
+  justify-content: space-around
+.ant-cascader-menu
+  font-family: sans-serif
+
+.btn
+  font-family: aria
+  width: 150px
+  // height: 100px
+  font-size: 16px
+  padding: 5px 20px
+  font-style: italic
+  margin: auto
+  // transform: translateY(-75%)
+  background-color: black
+  border: 1px solid black
+  border-radius: 2px
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
+  color: white
+  display: inline-block
+  font-size: 1rem
+  font-weight: 300
+  margin: 6px
+  overflow: hidden
+  position: relative
+  // padding: .7rem 2rem
+  text-align: center
+  text-decoration: none
+  -webkit-transition: .2s ease-out
+  transition: .2s ease-out
+  white-space: normal !important
+  word-wrap: break-word
+
+.btn:hover
+    color: black
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)
+.shutter-out-horizontal
+    -webkit-transition: color 300ms
+    transition: color 300ms
+    position: relative
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+    -moz-osx-font-smoothing: grayscale
+
+.shutter-out-horizontal:before
+    content: ""
+    position: absolute
+    z-index: -1
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: white
+    -webkit-transform: scaleX(0)
+    transform: scaleX(0)
+    -webkit-transform-origin: 50%
+    transform-origin: 50%
+    -webkit-transition-property: transform
+    transition-property: transform
+    -webkit-transition: 300ms ease-out
+    transition: 300ms ease-out
+
+.shutter-out-horizontal:hover:before
+    -webkit-transform: scaleX(1)
+    transform: scaleX(1)
